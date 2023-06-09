@@ -2,12 +2,12 @@
 
 import React, { useState } from 'react';
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import { MyContext } from './hooks/MyContext';
 import Sidebar from './components/Sidebar';
 import Navigation from './components/Navigation';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Poppins({ subsets: ['latin'], weight: '400' });
 
 export const metadata = {
   title: 'DHTN school management system',
