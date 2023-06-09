@@ -41,14 +41,13 @@ html {
 }
 
 body {
-  background: var(--first-color);
-  color: whitesmoke;
   overflow-x: hidden;
+  background: var(--first-color);
 }
 
 a {
   text-decoration: none;
-  color: whitesmoke;
+  color: var(--text-dark);
 }
 
 img {
@@ -71,31 +70,55 @@ option {
   font-family: 'Poppins', sans-serif;
 }
 
+header {
+  margin: 1rem;
+}
+
 .sidebar {
   width: 14rem;
   height: 100vh;
-  background-color: #f1f1f1;
+  background-color: var(--second-color);
   position: fixed;
   top: 0;
   left: 0;
   transition: transform 0.2s ease-in-out;
   transform: translateX(0);
+  overflow-y: scroll;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-close {
-  transform: translateX(-11rem);
+  transform: translateX(-14rem);
 }
 
-.sidebar-btn {
+nav {
+  position: relative;
+  margin: 10px;
+}
+
+.ham-btn {
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
+}
+
+main {
+  background: var(--first-color);
+  min-height: 100vh;
 }
 
 .main-parent {
   margin-left: 15rem;
 }
 
+.main-content {
+  position: relative;
+}
+
 .main-close {
-  margin-left: 3rem;
+  margin-left: 1rem;
 }
