@@ -183,17 +183,21 @@ textarea:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border-bottom: 2px solid var(--fourth-color);
 }
 
 .nav-first-col {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .nav-form {
   display: flex;
   align-items: center;
+  gap: 0.1rem;
 }
 
 .nav .ham-btn,
@@ -202,17 +206,17 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.7rem 1rem;
+  padding: 0.8rem 1rem;
   background: var(--second-color);
   color: var(--text-light);
   border: none;
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
 }
 
 .ham-btn {
   font-size: 1.2rem;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .nav input {
@@ -224,6 +228,8 @@ input {
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
+
+/* pages global style */
 
 main {
   background: var(--first-color);
