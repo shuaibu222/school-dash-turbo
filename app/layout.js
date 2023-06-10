@@ -6,20 +6,20 @@ import { Poppins } from 'next/font/google';
 import { MyContext } from './hooks/MyContext';
 import Sidebar from './components/Sidebar';
 import Navigation from './components/Navigation';
+import { metadata } from './components/metadata';
 
 const inter = Poppins({ subsets: ['latin'], weight: '400' });
 
-export const metadata = {
-  title: 'DHTN school management system',
-  description: 'this is a huge database system designed for DHTN school',
-  charset: 'UTF-8',
-  author: 'shuaibu abdulkadir hussain',
-  viewport: 'width=device-width, initial-scale=1.0',
-  keywords: 'database DHTN school management system',
-};
-
 export default function RootLayout({ children }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  // importing metadata from components folder to avoid build issue('use client' + export default metadata) when deployment on vercel
+  document.title = metadata.title;
+  document.description = metadata.description;
+  document.charset = metadata.charset;
+  document.author = metadata.author;
+  document.viewport = metadata.viewport;
+  document.keywords = metadata.keywords;
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
