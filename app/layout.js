@@ -16,10 +16,7 @@ export default function RootLayout({ children }) {
   // importing metadata from components folder to avoid build issue('use client' + export default metadata) when deployment on vercel
   document.title = metadata.title;
   document.description = metadata.description;
-  document.charset = metadata.charset;
   document.author = metadata.author;
-  document.viewport = metadata.viewport;
-  document.keywords = metadata.keywords;
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
