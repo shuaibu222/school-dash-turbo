@@ -38,12 +38,17 @@ html {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
 body {
   overflow-x: hidden;
   background: var(--first-color);
   max-width: 98vw;
   margin-inline: auto;
-  padding: 1rem;
 }
 
 a {
@@ -173,7 +178,8 @@ textarea:focus {
   }
 
   .main-parent {
-    margin-left: 1rem;
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
   }
 }
 
@@ -194,21 +200,12 @@ textarea:focus {
   gap: 1rem;
 }
 
-.nav-form {
-  display: flex;
-  align-items: center;
-  gap: 0.1rem;
-}
-
-.nav .ham-btn,
-select,
-input {
+.nav .ham-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.8rem 1rem;
   background: var(--second-color);
-  color: var(--text-light);
   border: none;
   transition: all 0.3s ease-in-out;
 }
@@ -219,14 +216,16 @@ input {
   cursor: pointer;
 }
 
-.nav input {
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+.nav-sec-col .profile {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
-.nav select {
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
+.nav-sec-col img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
 }
 
 /* pages global style */
@@ -246,5 +245,6 @@ main {
 }
 
 .main-close {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }

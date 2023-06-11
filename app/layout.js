@@ -6,7 +6,6 @@ import { Poppins } from 'next/font/google';
 import { MyContext } from './hooks/MyContext';
 import Sidebar from './components/Sidebar';
 import Navigation from './components/Navigation';
-import { metadata } from './components/metadata';
 
 const inter = Poppins({ subsets: ['latin'], weight: '400' });
 
