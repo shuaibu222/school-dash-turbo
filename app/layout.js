@@ -13,11 +13,6 @@ const inter = Poppins({ subsets: ['latin'], weight: '400' });
 export default function RootLayout({ children }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
-  // importing metadata from components folder to avoid build issue('use client' + export default metadata) when deployment on vercel
-  document.title = metadata.title;
-  document.description = metadata.description;
-  document.author = metadata.author;
-
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
