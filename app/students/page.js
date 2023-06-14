@@ -10,8 +10,8 @@ export default async function Students() {
       <table>
         <thead>
           <tr>
-            <th>Image</th>
-            <th>Id</th>
+            <th>Profile</th>
+            <th>ID</th>
             <th>Date Join</th>
             <th>Name</th>
             <th>Age</th>

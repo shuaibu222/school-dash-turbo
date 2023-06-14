@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { MyContext } from '../hooks/MyContext';
 import { Poppins } from 'next/font/google';
 import { AiFillCaretDown } from 'react-icons/ai';
-import { MdDashboard, MdSchool, MdEvent } from 'react-icons/md';
+import { MdDashboard, MdSchool, MdEvent, MdClose } from 'react-icons/md';
 import { BsHouses } from 'react-icons/bs';
 import { IoPeople } from 'react-icons/io5';
 
@@ -14,7 +14,7 @@ import Link from 'next/link';
 const inter = Poppins({ subsets: ['latin'], weight: '800' });
 
 export default function Sidebar() {
-  const { isSidebarOpen } = useContext(MyContext);
+  const { isSidebarOpen, setIsSidebarOpen } = useContext(MyContext);
   return (
     <aside
       className={`sidebar ${isSidebarOpen ? '' : 'sidebar-close'}`}
@@ -24,9 +24,11 @@ export default function Sidebar() {
         <h1>
           <span className={inter.className} style={{ color: '#ff00d0' }}>
             DHTN
-          </span>{' '}
-          institute.
+          </span>
         </h1>
+        <div className="close-parent">
+          <MdClose className="close" onClick={() => setIsSidebarOpen(false)} />
+        </div>
       </div>
       <div className="admin-account">
         <div className="admin-image">

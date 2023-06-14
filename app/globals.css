@@ -96,7 +96,8 @@ textarea:focus {
   left: 10px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  align-items: flex-start;
+  gap: 2.5rem;
   width: 18rem;
   height: 97vh;
   padding: 1rem;
@@ -109,24 +110,35 @@ textarea:focus {
   z-index: 1;
 }
 
-.sidebar ul {
-  display: flex;
-  flex-direction: column;
-}
-
 .sidebar-close {
   transform: translateX(-19rem);
 }
 
 .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   padding: 0.5rem;
   background: var(--first-color);
+  color: white;
   border-radius: 0.5rem;
   font-size: 1.3rem;
 }
 
 .bold {
   color: #ff00d0;
+}
+
+.close-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 0.6rem;
+  font-size: 1.3rem;
+  background: var(--second-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .admin-account {
@@ -488,6 +500,7 @@ textarea:focus {
 .students-sec {
   max-width: 95%;
   margin-inline: auto;
+  overflow-x: auto;
 }
 
 .add-student {
@@ -499,31 +512,29 @@ textarea:focus {
 }
 
 table {
-  table-layout: fixed;
   border-collapse: collapse;
-  overflow-x: scroll;
-  min-width: 100%;
+  border-spacing: 0;
+  width: 100%;
   margin-top: 2rem;
   padding: 1rem;
-  border-radius: 1rem;
+  border: 1px solid var(--fourth-color);
+}
+
+thead {
   background: var(--second-color);
 }
 
-table thead,
-tbody {
-  vertical-align: bottom;
-}
-
-table tr {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+tr {
   border-bottom: 1px solid var(--fourth-color);
 }
 
-table th,
+table tr:nth-child(even) {
+  background-color: var(--second-color);
+}
+
+th,
 td {
-  text-align: start;
+  text-align: left;
   color: var(--text-dark);
   padding: 0.8rem;
 }
