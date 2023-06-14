@@ -5,6 +5,7 @@ import { BiPhone } from 'react-icons/bi';
 import { HiOutlineMail } from 'react-icons/hi';
 import getTeachers from '@/lib/getTeachers';
 import urlFor from '@/sanity';
+import Image from 'next/image';
 
 export default async function Teachers() {
   const teachers = await getTeachers();
@@ -16,9 +17,17 @@ export default async function Teachers() {
           const { image, name, courses, _id } = teacher;
           return (
             <Link href="/" className="teachers-card" key={_id}>
-              <img src={image} alt={name} />
+              <Image
+                src={image}
+                width={150}
+                height={150}
+                quality={100}
+                unoptimized={true}
+                alt={name}
+                className="img"
+              />
               <div className="teachers-desc">
-                <h4>{name}</h4>
+                <p className="t-name">{name}</p>
                 <p>{courses}</p>
               </div>
               <div className="teachers-icons">

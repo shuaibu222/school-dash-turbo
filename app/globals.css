@@ -139,9 +139,7 @@ textarea:focus {
   border-radius: 3rem;
 }
 
-.admin-image img {
-  width: 4rem;
-  height: 4rem;
+.admin-image .admin-img {
   border-radius: 50%;
 }
 
@@ -444,7 +442,7 @@ textarea:focus {
   border-color: var(--fourth-color);
 }
 
-.teachers-card img {
+.teachers-card .img {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
@@ -454,7 +452,13 @@ textarea:focus {
   text-align: center;
 }
 
+.teachers-desc .t-name {
+  color: white;
+  font-size: 1.1rem;
+}
+
 .teachers-desc p {
+  font-size: 0.8rem;
   color: var(--text-dark);
 }
 
@@ -492,6 +496,46 @@ textarea:focus {
   justify-content: space-between;
   max-width: 95%;
   margin-inline: auto;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  overflow-x: scroll;
+  min-width: 100%;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--second-color);
+}
+
+table thead,
+tbody {
+  vertical-align: bottom;
+}
+
+table tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--fourth-color);
+}
+
+table th,
+td {
+  text-align: start;
+  color: var(--text-dark);
+  padding: 0.8rem;
+}
+
+table th {
+  color: var(--text-light);
+}
+
+tbody img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
 }
 
 /* animations style */

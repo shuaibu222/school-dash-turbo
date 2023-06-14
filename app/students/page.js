@@ -1,5 +1,6 @@
 import React from 'react';
 import getStudents from '@/lib/getStudents';
+import Image from 'next/image';
 
 export default async function Students() {
   const students = await getStudents();
@@ -14,7 +15,7 @@ export default async function Students() {
             <th>Date Join</th>
             <th>Name</th>
             <th>Age</th>
-            <th>Parent Name</th>
+            <th>Gender</th>
             <th>Phone No.</th>
             <th>Department</th>
           </tr>
@@ -37,14 +38,15 @@ export default async function Students() {
             <tbody key={_id}>
               <tr>
                 <td>
-                  <img src={image} alt={name} />
+                  <Image src={image} width={100} height={100} alt={name} />
                 </td>
                 <td>{id}</td>
                 <td>{new Date(_createdAt).toLocaleDateString()}</td>
-                <td>{name}</td>
+                <td>
+                  {name} {parentName}
+                </td>
                 <td>{age}</td>
                 <td>{gender}</td>
-                <td>{parentName}</td>
                 <td>{phone}</td>
                 <td>{department}</td>
               </tr>

@@ -1,4 +1,20 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {};
 
-module.exports = nextConfig
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'shuaibuportfolio.netlify.app',
+        port: '',
+        pathname: '/src/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'external-content.duckduckgo.com',
+        port: '',
+      },
+    ],
+  },
+};
