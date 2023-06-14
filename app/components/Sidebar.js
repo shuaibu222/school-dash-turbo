@@ -8,6 +8,7 @@ import { AiFillCaretDown } from 'react-icons/ai';
 import { MdDashboard, MdSchool, MdEvent, MdClose } from 'react-icons/md';
 import { BsHouses } from 'react-icons/bs';
 import { IoPeople } from 'react-icons/io5';
+import { useMediaQuery } from '@react-hook/media-query';
 
 import Link from 'next/link';
 
@@ -15,6 +16,9 @@ const inter = Poppins({ subsets: ['latin'], weight: '800' });
 
 export default function Sidebar() {
   const { isSidebarOpen, setIsSidebarOpen } = useContext(MyContext);
+
+  const isPhoneViewport = useMediaQuery('(max-width: 30em)');
+
   return (
     <aside
       className={`sidebar ${isSidebarOpen ? '' : 'sidebar-close'}`}
@@ -27,7 +31,10 @@ export default function Sidebar() {
           </span>
         </h1>
         <div className="close-parent">
-          <MdClose className="close" onClick={() => setIsSidebarOpen(false)} />
+          <MdClose
+            className="close"
+            onClick={() => setIsSidebarOpen((prevState) => !prevState)}
+          />
         </div>
       </div>
       <div className="admin-account">
@@ -51,23 +58,68 @@ export default function Sidebar() {
       <div className="links">
         <div className="dashboard sidenav-icons">
           <MdDashboard className="side-icons" />
-          <Link href="/">Dashboard</Link>
+          <Link
+            href="/"
+            onClick={() => {
+              if (isPhoneViewport) {
+                setIsSidebarOpen((prevState) => !prevState);
+              }
+            }}
+          >
+            Dashboard
+          </Link>
         </div>
         <div className="departments sidenav-icons">
           <BsHouses className="side-icons" />
-          <Link href="departments">Departments</Link>
+          <Link
+            href="departments"
+            onClick={() => {
+              if (isPhoneViewport) {
+                setIsSidebarOpen((prevState) => !prevState);
+              }
+            }}
+          >
+            Departments
+          </Link>
         </div>
         <div className="teachers sidenav-icons">
           <MdSchool className="side-icons" />
-          <Link href="teachers">Teachers</Link>
+          <Link
+            href="teachers"
+            onClick={() => {
+              if (isPhoneViewport) {
+                setIsSidebarOpen((prevState) => !prevState);
+              }
+            }}
+          >
+            Teachers
+          </Link>
         </div>
         <div className="students sidenav-icons">
           <IoPeople className="side-icons" />
-          <Link href="students">Students</Link>
+          <Link
+            href="students"
+            onClick={() => {
+              if (isPhoneViewport) {
+                setIsSidebarOpen((prevState) => !prevState);
+              }
+            }}
+          >
+            Students
+          </Link>
         </div>
         <div className="events sidenav-icons">
           <MdEvent className="side-icons" />
-          <Link href="events">Events</Link>
+          <Link
+            href="events"
+            onClick={() => {
+              if (isPhoneViewport) {
+                setIsSidebarOpen((prevState) => !prevState);
+              }
+            }}
+          >
+            Events
+          </Link>
         </div>
       </div>
     </aside>
