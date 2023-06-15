@@ -1,21 +1,23 @@
+import {typed} from 'sanity'
+
 export default {
   name: 'events',
   type: 'document',
   title: 'Events',
   fields: [
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
+      name: 'date',
+      title: 'Date',
+      type: 'text',
     },
     {
       name: 'title',
       title: 'Title',
-      type: 'string',
+      type: 'text',
     },
     {
-      name: 'description',
-      title: 'Description',
+      name: 'time',
+      title: 'Time',
       type: 'text',
     },
     {

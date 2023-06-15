@@ -252,8 +252,10 @@ textarea:focus {
 /* pages global style */
 
 main {
+  position: relative;
   background: var(--first-color);
   min-height: 100vh;
+  margin-bottom: 2rem;
 }
 
 .main-parent {
@@ -556,7 +558,7 @@ tbody img {
 .loader {
   position: absolute;
   left: 40%;
-  top: 40%;
+  top: 30%;
   border: 16px solid var(--first-color);
   border-top: 16px solid var(--fourth-color);
   border-bottom: 16px solid var(--fourth-color);
