@@ -555,7 +555,7 @@ tbody img {
 
 .loader {
   position: absolute;
-  left: 50%;
+  left: 40%;
   top: 40%;
   border: 16px solid var(--first-color);
   border-top: 16px solid var(--fourth-color);
