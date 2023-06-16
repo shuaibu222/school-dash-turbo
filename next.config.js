@@ -15,6 +15,12 @@ module.exports = {
         hostname: 'external-content.duckduckgo.com',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        port: '',
+        pathname: '/images/**',
+      },
     ],
   },
 };

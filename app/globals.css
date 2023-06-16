@@ -1,9 +1,9 @@
 /* CSS variables */
 
 :root {
-  --first-color: #27003f;
-  --second-color: #580958;
-  --third-color: #a91079;
+  --first-color: #1e0031;
+  --second-color: #500450a4;
+  --third-color: #960769;
   --fourth-color: #ff00d0;
   --text-light: white;
   --text-dark: rgb(220, 220, 220);
@@ -295,15 +295,20 @@ main {
 .dept-card {
   display: flex;
   flex-direction: column;
-  background: var(--second-color);
-  border: 0.5px solid var(--third-color);
+  border: 3px solid var(--fourth-color);
   border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.dept-card:hover {
+  background: var(--second-color);
 }
 
 .dept-card img {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  height: 10rem;
+  height: 12rem;
 }
 
 .dept-desc {
@@ -312,6 +317,10 @@ main {
   align-items: flex-start;
   gap: 1.3rem;
   padding: 1.3rem;
+}
+
+.dept-desc h4 {
+  font-size: 1.2rem;
 }
 
 .dept-text {
@@ -445,15 +454,14 @@ textarea:focus {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  background: var(--second-color);
   padding: 1rem;
-  border: 3px solid transparent;
+  border: 3px solid var(--fourth-color);
   border-radius: 1rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .teachers-card:hover {
-  border-color: var(--fourth-color);
+  background-color: var(--second-color);
 }
 
 .teachers-card .img {
@@ -485,9 +493,10 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.2rem;
   background: var(--first-color);
   color: var(--fourth-color);
-  padding: 0.3rem;
+  padding: 0.5rem;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
 }
@@ -553,21 +562,54 @@ tbody img {
 
 /* events style */
 
-.events {
+.events-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   max-width: 95%;
   margin-inline: auto;
+  margin-top: 2rem;
 }
 
 .event-card {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  background: var(--second-color);
-  padding: 1rem;
+  gap: 1.5rem;
+  padding: 2rem;
+  border: 3px solid var(--fourth-color);
   border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.event-card:hover {
+  background: var(--second-color);
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.date-letter {
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.date-num {
+  color: white;
+  font-size: 2rem;
+}
+
+.topic {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.timing p {
+  color: var(--text-dark);
+  font-size: 0.7rem;
 }
 
 /* animations style */

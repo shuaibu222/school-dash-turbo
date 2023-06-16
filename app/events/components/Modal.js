@@ -8,17 +8,17 @@ import { client } from '@/sanity';
 export default function Modal() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [date, setDate] = useState('');
-  const [topic, setTopic] = useState('');
+  const [title, setTitle] = useState('');
   const [time, setTime] = useState('');
   const [address, setAddress] = useState('');
 
   const handleStudentSubmit = async (e) => {
     e.preventDefault();
-    if ((date, topic, time, address)) {
+    if ((date, title, time, address)) {
       const newStudent = {
         _type: 'events',
         date: date,
-        topic: topic,
+        title: title,
         time: time,
         address: address,
       };
@@ -31,7 +31,7 @@ export default function Modal() {
       }
 
       setDate('');
-      setTopic('');
+      setTitle('');
       setTime('');
       setAddress('');
     }
@@ -72,8 +72,8 @@ export default function Modal() {
                   type="text"
                   name="topic"
                   placeholder="e.g. AI in the modern world"
-                  value={topic}
-                  onChange={(e) => setTopic(e.target.value)}
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
                   id="topic"
                 />
               </div>

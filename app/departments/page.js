@@ -1,5 +1,6 @@
 import { GoPerson } from 'react-icons/go';
 import { MdSchool } from 'react-icons/md';
+import Image from 'next/image';
 import urlFor from '@/sanity';
 import getDepartments from '@/lib/getDepartments';
 
@@ -13,7 +14,12 @@ export default async function Departments() {
           const { name, image, head, _id } = department;
           return (
             <div className="dept-card" key={_id}>
-              <img src={urlFor(image).fit('max').width(200).url()} alt={name} />
+              <Image
+                src={urlFor(image).fit('max').width(200).url()}
+                width={200}
+                height={200}
+                alt={name}
+              />
               <div className="dept-desc">
                 <h4>{name}</h4>
                 <div className="dept-text">
