@@ -26,9 +26,7 @@ export default function Sidebar() {
     >
       <div className="logo">
         <h1>
-          <span className={inter.className} style={{ color: '#ff00d0' }}>
-            DHTN
-          </span>
+          <span className={inter.className}>DHTN</span>
         </h1>
         <div className="close-parent">
           <MdClose

@@ -1,10 +1,10 @@
 /* CSS variables */
 
 :root {
-  --first-color: #1e0031;
-  --second-color: #500450a4;
-  --third-color: #960769;
-  --fourth-color: #ff00d0;
+  --first-color: #1b002c;
+  --second-color: #3f023f;
+  --third-color: #880576;
+  --fourth-color: #eb00c0;
   --text-light: white;
   --text-dark: rgb(220, 220, 220);
 }
@@ -78,7 +78,8 @@ th {
 input,
 textarea,
 select,
-option {
+option,
+button {
   border: none;
   font-family: 'Poppins', sans-serif;
 }
@@ -289,20 +290,22 @@ main {
 .parent-card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 1.5rem;
 }
 
 .dept-card {
   display: flex;
   flex-direction: column;
-  border: 3px solid var(--fourth-color);
+  background: var(--second-color);
+  border: 2px solid transparent;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
 .dept-card:hover {
-  background: var(--second-color);
+  border-color: var(--fourth-color);
+  background: var(--first-color);
 }
 
 .dept-card img {
@@ -455,13 +458,15 @@ textarea:focus {
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  border: 3px solid var(--fourth-color);
+  background: var(--second-color);
+  border: 2px solid transparent;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
 }
 
 .teachers-card:hover {
-  background-color: var(--second-color);
+  border-color: var(--fourth-color);
+  background-color: var(--first-color);
 }
 
 .teachers-card .img {
@@ -576,14 +581,16 @@ tbody img {
   flex-direction: column;
   gap: 1.5rem;
   padding: 2rem;
-  border: 3px solid var(--fourth-color);
+  background: var(--second-color);
+  border: 2px solid transparent;
   border-radius: 1rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
 .event-card:hover {
-  background: var(--second-color);
+  border-color: var(--fourth-color);
+  background: var(--first-color);
 }
 
 .date {
