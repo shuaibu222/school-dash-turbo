@@ -184,7 +184,7 @@ textarea:focus {
   font-size: 1.5rem;
 }
 
-@media (max-width: 30em) {
+@media (max-width: 35em) {
   .sidebar {
     transform: translateX(-19rem);
     z-index: 1;
@@ -286,7 +286,7 @@ main {
 
 .stats-first {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
@@ -302,6 +302,12 @@ main {
 
 .stats-card p:nth-child(1) {
   font-size: 3rem;
+}
+
+@media (min-width: 60em) {
+  .stats-first {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* department */

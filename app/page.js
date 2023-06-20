@@ -6,6 +6,7 @@ import getDepartments from '@/lib/getDepartments';
 import getEvents from '@/lib/getEvents';
 import getStudents from '@/lib/getStudents';
 import getTeachers from '@/lib/getTeachers';
+import BarCharts from './components/BarCharts';
 
 export default async function Home() {
   const teachers = await getTeachers();
@@ -43,8 +44,11 @@ export default async function Home() {
           </div>
         </section>
         <section className="stats-second">
-          <div className="chart"></div>
+          <div className="chart">
+            <BarCharts />
+          </div>
           <div className="some-events"></div>
+          <div className="recent-student"></div>
         </section>
       </article>
     </main>
