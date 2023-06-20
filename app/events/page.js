@@ -12,10 +12,10 @@ export default async function Events() {
           <div className="event-card" key={_id}>
             <div className="date">
               {/* 
-                --first-color: #03031a;
-  --second-color: #0a0e29;
-  --third-color: #191946;
-  --fourth-color: #282c5c;
+                  --first-color: #02021b;
+  --second-color: #040e42;
+  --third-color: #0c0c61;
+  --fourth-color: #000c94;
               */}
               <h1 className="date-letter">{minimizeDateWords}</h1>
               <p className="date-num">{dateNum}</p>
