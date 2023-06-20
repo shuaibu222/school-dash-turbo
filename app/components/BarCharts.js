@@ -53,7 +53,7 @@ export default function BarCharts() {
         },
         title: {
           display: true,
-          text: 'Chart.js Bar Chart',
+          text: 'Admission Report',
         },
       },
     });
