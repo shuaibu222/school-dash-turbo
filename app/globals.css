@@ -2,7 +2,7 @@
 
 :root {
   --first-color: #1b002c;
-  --second-color: #4e044e;
+  --second-color: #470347;
   --third-color: #880576;
   --fourth-color: #eb00c0;
   --text-light: white;
@@ -302,6 +302,77 @@ main {
 
 .stats-card p:nth-child(1) {
   font-size: 3rem;
+}
+
+.stats-second {
+  display: grid;
+  grid-template-areas:
+    'a a a a'
+    'b b c c';
+  gap: 1rem;
+}
+
+.chart {
+  grid-area: a;
+  padding: 2rem;
+
+  border: 2px solid var(--fourth-color);
+  border-radius: 2rem;
+}
+
+.some-events {
+  grid-area: b;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--second-color);
+  border-radius: 1rem;
+}
+
+.upcoming-events {
+  display: flex;
+  gap: 1rem;
+  padding: 0.8rem;
+  background: var(--first-color);
+  border-radius: 1rem;
+}
+
+.date-upcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--fourth-color);
+  border-radius: 0.2rem;
+}
+
+.date-upcome p {
+  padding: 0.2rem 0.7rem;
+}
+
+.date-upcome p:nth-child(1) {
+  background: var(--fourth-color);
+}
+
+.date-upcome p:nth-child(2) {
+  font-size: 1.2rem;
+}
+
+.recent-student {
+  grid-area: c;
+  padding: 1rem;
+  background: var(--second-color);
+  border-radius: 1rem;
+}
+
+.recent-card {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.recent-card .recent-img {
+  width: 70px;
+  height: 70px;
 }
 
 @media (min-width: 60em) {

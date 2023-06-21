@@ -32,17 +32,20 @@ export default function BarCharts() {
         {
           label: 'Students',
           data: [3, 5, 2, 4, 6, 1],
-          borderColor: '#4e044e',
-          backgroundColor: '#eb00c0',
+          backgroundColor: '#880576',
         },
         {
           label: 'Teachers',
           data: [2, 4, 6, 1, 3, 5],
-          borderColor: '#4e044e',
-          backgroundColor: 'cyan',
+          backgroundColor: 'rgb(0, 207, 207)',
         },
       ],
     });
+
+    ChartJS.defaults.font.size = 15;
+    ChartJS.defaults.font.family = 'Poppins';
+    ChartJS.defaults.color = 'rgb(220, 220, 220)';
+    ChartJS.defaults.borderColor = 'rgb(70, 70, 70)';
 
     setChartOptions({
       responsive: true,
