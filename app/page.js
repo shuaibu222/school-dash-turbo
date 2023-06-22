@@ -3,6 +3,7 @@ import { BsPeopleFill } from 'react-icons/bs';
 import { IoSchoolSharp } from 'react-icons/io5';
 import { MdEvent } from 'react-icons/md';
 import Image from 'next/image';
+import Link from 'next/link';
 import getDepartments from '@/lib/getDepartments';
 import getEvents from '@/lib/getEvents';
 import getStudents from '@/lib/getStudents';
@@ -50,47 +51,56 @@ export default async function Home() {
           <div className="chart">
             <BarCharts className="barchart" />
           </div>
-          <div className="some-events">
-            <h2>Upcoming Events</h2>
-            {latestEvents.map((event) => {
-              const { _id, date, address, title } = event;
-              const minimizeDateWords = date.slice(0, 3);
-              const dateNum = date.slice(-2, date.length);
-              return (
-                <div className="upcoming-events" key={_id}>
-                  <div className="date-upcome">
-                    <p>{minimizeDateWords}</p>
-                    <p>{dateNum}</p>
+          <div className="dash-apis">
+            <div className="some-events">
+              <h3>Upcoming Events</h3>
+              {latestEvents.map((event) => {
+                const { _id, date, address, title } = event;
+                const minimizeDateWords = date.slice(0, 3);
+                const dateNum = date.slice(-2, date.length);
+                return (
+                  <div className="upcoming-events" key={_id}>
+                    <div className="date-upcome">
+                      <p>{minimizeDateWords}</p>
+                      <p>{dateNum}</p>
+                    </div>
+                    <div className="desc-upcome">
+                      <p>{title}</p>
+                      <p>{address}</p>
+                    </div>
                   </div>
-                  <div className="desc-upcome">
-                    <p>{title}</p>
-                    <p>{address}</p>
+                );
+              })}
+              <Link href="events" className="button">
+                more events
+              </Link>
+            </div>
+            <div className="recent-student">
+              <h3>New Students</h3>
+              {latestStudent.map((student) => {
+                const { _id, image, name, department } = student;
+                return (
+                  <div className="recent-card" key={_id}>
+                    <div className="recent-image">
+                      <Image
+                        src={image}
+                        width={100}
+                        height={100}
+                        alt={name}
+                        className="recent-img"
+                      />
+                    </div>
+                    <div>
+                      <p className="recent-name">{name}</p>
+                      <p className="recent-dept">{department}</p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-            <button>more events</button>
-          </div>
-          <div className="recent-student">
-            <h2>New Students</h2>
-            {latestStudent.map((student) => {
-              const { _id, image, name } = student;
-              return (
-                <div className="recent-card" key={_id}>
-                  <div className="recent-image">
-                    <Image
-                      src={image}
-                      width={100}
-                      height={100}
-                      alt={name}
-                      className="recent-img"
-                    />
-                  </div>
-                  <div className="recent-name">{name}</div>
-                </div>
-              );
-            })}
-            <button>all students</button>
+                );
+              })}
+              <Link href="students" className="button">
+                all students
+              </Link>
+            </div>
           </div>
         </section>
       </article>

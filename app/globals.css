@@ -2,11 +2,11 @@
 
 :root {
   --first-color: #1b002c;
-  --second-color: #470347;
+  --second-color: #3b033b;
   --third-color: #880576;
   --fourth-color: #eb00c0;
   --text-light: white;
-  --text-dark: rgb(220, 220, 220);
+  --text-dark: rgb(215, 215, 215);
 }
 
 /* base styles */
@@ -184,7 +184,7 @@ textarea:focus {
   font-size: 1.5rem;
 }
 
-@media (max-width: 35em) {
+@media (max-width: 40em) {
   .sidebar {
     transform: translateX(-19rem);
     z-index: 1;
@@ -305,27 +305,43 @@ main {
 }
 
 .stats-second {
-  display: grid;
-  grid-template-areas:
-    'a a a a'
-    'b b c c';
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
 .chart {
-  grid-area: a;
-  padding: 2rem;
-
-  border: 2px solid var(--fourth-color);
+  padding: 1rem;
+  background: var(--second-color);
   border-radius: 2rem;
 }
 
+.dash-apis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+}
+
+.dash-apis .button {
+  text-align: center;
+  background: var(--third-color);
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.dash-apis .button:hover {
+  background: var(--fourth-color);
+}
+
 .some-events {
-  grid-area: b;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1.5rem;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
   background: var(--second-color);
   border-radius: 1rem;
 }
@@ -333,7 +349,7 @@ main {
 .upcoming-events {
   display: flex;
   gap: 1rem;
-  padding: 0.8rem;
+  padding: 0.5rem;
   background: var(--first-color);
   border-radius: 1rem;
 }
@@ -342,7 +358,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid var(--fourth-color);
+  border: 2px solid var(--third-color);
   border-radius: 0.2rem;
 }
 
@@ -351,15 +367,27 @@ main {
 }
 
 .date-upcome p:nth-child(1) {
-  background: var(--fourth-color);
+  background: var(--third-color);
 }
 
 .date-upcome p:nth-child(2) {
   font-size: 1.2rem;
 }
 
+.desc-upcome p:nth-child(1) {
+  font-size: 1rem;
+}
+
+.desc-upcome p:nth-child(2) {
+  font-size: 0.8rem;
+  color: var(--text-dark);
+}
+
 .recent-student {
-  grid-area: c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
   padding: 1rem;
   background: var(--second-color);
   border-radius: 1rem;
@@ -367,12 +395,25 @@ main {
 
 .recent-card {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
+  padding: 0.5rem;
+  background: var(--first-color);
+  border-radius: 1rem;
 }
 
 .recent-card .recent-img {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
+  border-radius: 0.5rem;
+}
+
+.recent-card div p:nth-child(1) {
+  font-size: 1rem;
+}
+
+.recent-card div p:nth-child(2) {
+  font-size: 0.8rem;
+  color: var(--text-dark);
 }
 
 @media (min-width: 60em) {

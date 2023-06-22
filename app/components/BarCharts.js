@@ -32,7 +32,7 @@ export default function BarCharts() {
         {
           label: 'Students',
           data: [3, 5, 2, 4, 6, 1],
-          backgroundColor: '#880576',
+          backgroundColor: '#eb00c0',
         },
         {
           label: 'Teachers',
