@@ -2,11 +2,11 @@
 
 :root {
   --first-color: #1b002c;
-  --second-color: #3b033b;
-  --third-color: #880576;
+  --second-color: #380338;
+  --third-color: #960182;
   --fourth-color: #eb00c0;
   --text-light: white;
-  --text-dark: rgb(215, 215, 215);
+  --text-dark: rgb(210, 210, 210);
 }
 
 /* base styles */
@@ -137,9 +137,14 @@ textarea:focus {
   align-items: center;
   padding: 0.6rem 0.6rem;
   font-size: 1.3rem;
-  background: var(--second-color);
+  background: var(--third-color);
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.close-parent:hover {
+  background: var(--fourth-color);
 }
 
 .admin-account {
@@ -222,16 +227,17 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.8rem 1rem;
-  background: var(--second-color);
-  border: none;
-  transition: all 0.3s ease-in-out;
-}
-
-.ham-btn {
   font-size: 1.2rem;
   border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  background: var(--third-color);
+  border: none;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.ham-btn:hover {
+  background: var(--fourth-color);
 }
 
 .nav-sec-col .profile {
@@ -311,14 +317,14 @@ main {
 }
 
 .chart {
-  padding: 1rem;
+  padding: 0.5rem;
   background: var(--second-color);
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 .dash-apis {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 1rem;
 }
 
@@ -339,7 +345,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: 1rem;
   width: 100%;
   padding: 1rem;
   background: var(--second-color);
@@ -350,7 +356,6 @@ main {
   display: flex;
   gap: 1rem;
   padding: 0.5rem;
-  background: var(--first-color);
   border-radius: 1rem;
 }
 
@@ -363,10 +368,11 @@ main {
 }
 
 .date-upcome p {
-  padding: 0.2rem 0.7rem;
+  padding: 0.2rem 0.5rem;
 }
 
 .date-upcome p:nth-child(1) {
+  font-size: 0.9rem;
   background: var(--third-color);
 }
 
@@ -374,12 +380,18 @@ main {
   font-size: 1.2rem;
 }
 
+.desc-upcome {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .desc-upcome p:nth-child(1) {
   font-size: 1rem;
 }
 
 .desc-upcome p:nth-child(2) {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--text-dark);
 }
 
@@ -387,7 +399,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: 1rem;
   padding: 1rem;
   background: var(--second-color);
   border-radius: 1rem;
@@ -397,7 +409,6 @@ main {
   display: flex;
   gap: 1rem;
   padding: 0.5rem;
-  background: var(--first-color);
   border-radius: 1rem;
 }
 
@@ -407,12 +418,18 @@ main {
   border-radius: 0.5rem;
 }
 
+.recent-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .recent-card div p:nth-child(1) {
   font-size: 1rem;
 }
 
 .recent-card div p:nth-child(2) {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--text-dark);
 }
 
@@ -439,7 +456,7 @@ main {
 .parent-card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  grid-gap: 1.5rem;
+  grid-gap: 2rem;
 }
 
 .dept-card {
@@ -453,14 +470,15 @@ main {
 }
 
 .dept-card:hover {
+  transform: scale(105%);
   border-color: var(--fourth-color);
-  background: var(--first-color);
 }
 
 .dept-card img {
+  height: 12rem;
+  filter: brightness(40%);
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  height: 12rem;
 }
 
 .dept-desc {
@@ -517,6 +535,10 @@ main {
 }
 
 /* modal style */
+
+.add h3 {
+  font-size: 2rem;
+}
 
 .add-teacher {
   display: flex;
@@ -614,8 +636,8 @@ textarea:focus {
 }
 
 .teachers-card:hover {
+  transform: scale(105%);
   border-color: var(--fourth-color);
-  background-color: var(--first-color);
 }
 
 .teachers-card .img {
@@ -693,9 +715,9 @@ tr {
   border-bottom: 1px solid var(--fourth-color);
 }
 
-table tr:nth-child(even) {
+/* table tr:nth-child(even) {
   background-color: var(--second-color);
-}
+} */
 
 th,
 td {
@@ -738,8 +760,8 @@ tbody img {
 }
 
 .event-card:hover {
+  transform: scale(105%);
   border-color: var(--fourth-color);
-  background: var(--first-color);
 }
 
 .date {

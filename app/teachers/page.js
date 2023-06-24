@@ -16,7 +16,7 @@ export default async function Teachers() {
         {teachers.map((teacher) => {
           const { image, name, courses, _id } = teacher;
           return (
-            <Link href="/" className="teachers-card" key={_id}>
+            <Link href={`teachers/${_id}`} className="teachers-card" key={_id}>
               <Image
                 src={image}
                 width={150}
