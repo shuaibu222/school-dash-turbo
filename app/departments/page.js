@@ -1,6 +1,7 @@
 import { GoPerson } from 'react-icons/go';
 import { MdSchool } from 'react-icons/md';
 import Image from 'next/image';
+import Link from 'next/link';
 import urlFor from '@/sanity';
 import getDepartments from '@/lib/getDepartments';
 
@@ -32,7 +33,9 @@ export default async function Departments() {
                     <p>Students: 100+</p>
                   </div>
                 </div>
-                <button className="more-dept">More Details</button>
+                <Link href={`departments/${_id}`} className="more-dept">
+                  More Details
+                </Link>
               </div>
             </div>
           );
