@@ -1,8 +1,8 @@
 /* CSS variables */
 
 :root {
-  --first-color: #1b002c;
-  --second-color: #380338;
+  --first-color: #1a002b;
+  --second-color: #350235;
   --third-color: #960182;
   --fourth-color: #eb00c0;
   --text-light: white;
@@ -476,7 +476,7 @@ main {
 
 .dept-card img {
   height: 12rem;
-  filter: brightness(40%);
+  filter: brightness(85%);
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
