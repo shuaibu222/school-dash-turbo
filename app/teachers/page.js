@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { BiPhone } from 'react-icons/bi';
 import { HiOutlineMail } from 'react-icons/hi';
