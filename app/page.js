@@ -16,7 +16,6 @@ export default async function Home() {
   const teachers = await getTeachers();
   const students = await getStudents();
   const events = await getEvents();
-  const departments = await getDepartments();
   const latestStudent = await getLatestStudents();
   const latestEvents = await getLatestEvents();
 
@@ -54,49 +53,53 @@ export default async function Home() {
           <div className="dash-apis">
             <div className="some-events">
               <h3>Upcoming Events</h3>
-              {latestEvents.map((event) => {
-                const { _id, date, address, title } = event;
-                const minimizeDateWords = date.slice(0, 3);
-                const dateNum = date.slice(-2, date.length);
-                return (
-                  <div className="upcoming-events" key={_id}>
-                    <div className="date-upcome">
-                      <p>{minimizeDateWords}</p>
-                      <p>{dateNum}</p>
+              <div>
+                {latestEvents.map((event) => {
+                  const { _id, date, address, title } = event;
+                  const minimizeDateWords = date.slice(0, 3);
+                  const dateNum = date.slice(-2, date.length);
+                  return (
+                    <div className="upcoming-events" key={_id}>
+                      <div className="date-upcome">
+                        <p>{minimizeDateWords}</p>
+                        <p>{dateNum}</p>
+                      </div>
+                      <div className="desc-upcome">
+                        <p>{title}</p>
+                        <p>{address}</p>
+                      </div>
                     </div>
-                    <div className="desc-upcome">
-                      <p>{title}</p>
-                      <p>{address}</p>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
               <Link href="events" className="button">
                 more events
               </Link>
             </div>
             <div className="recent-student">
               <h3>New Students</h3>
-              {latestStudent.map((student) => {
-                const { _id, image, name, department } = student;
-                return (
-                  <div className="recent-card" key={_id}>
-                    <div className="recent-image">
-                      <Image
-                        src={image}
-                        width={100}
-                        height={100}
-                        alt={name}
-                        className="recent-img"
-                      />
+              <div>
+                {latestStudent.map((student) => {
+                  const { _id, image, name, department } = student;
+                  return (
+                    <div className="recent-card" key={_id}>
+                      <div className="recent-image">
+                        <Image
+                          src={image}
+                          width={100}
+                          height={100}
+                          alt={name}
+                          className="recent-img"
+                        />
+                      </div>
+                      <div>
+                        <p className="recent-name">{name}</p>
+                        <p className="recent-dept">{department}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="recent-name">{name}</p>
-                      <p className="recent-dept">{department}</p>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
               <Link href="students" className="button">
                 all students
               </Link>

@@ -132,13 +132,18 @@ export default function Modal() {
               </div>
               <div>
                 <label htmlFor="department">Department:</label>
-                <input
-                  type="text"
+                <select
                   name="department"
                   value={department}
                   onChange={(e) => setDepartment(e.target.value)}
                   id="department"
-                />
+                >
+                  <option value="default">select department</option>
+                  <option value="computer science">Computer Science</option>
+                  <option value="economics">Economics</option>
+                  <option value="mathematics">Mathematics</option>
+                  <option value="science">Science</option>
+                </select>
               </div>
               <button
                 className="more-dept"

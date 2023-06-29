@@ -328,19 +328,6 @@ main {
   gap: 1rem;
 }
 
-.dash-apis .button {
-  text-align: center;
-  background: var(--third-color);
-  font-size: 1rem;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease-in-out;
-}
-
-.dash-apis .button:hover {
-  background: var(--fourth-color);
-}
-
 .some-events {
   display: flex;
   flex-direction: column;
@@ -350,6 +337,12 @@ main {
   padding: 1rem;
   background: var(--second-color);
   border-radius: 1rem;
+}
+
+.some-events > div {
+  padding: 0.5rem 0px;
+  border-top: 2px solid var(--fourth-color);
+  border-bottom: 2px solid var(--fourth-color);
 }
 
 .upcoming-events {
@@ -368,11 +361,11 @@ main {
 }
 
 .date-upcome p {
-  padding: 0.2rem 0.5rem;
+  padding: 0.1rem 0.5rem;
 }
 
 .date-upcome p:nth-child(1) {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   background: var(--third-color);
 }
 
@@ -398,11 +391,16 @@ main {
 .recent-student {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
   background: var(--second-color);
   border-radius: 1rem;
+}
+
+.recent-student > div {
+  padding: 0.5rem 0px;
+  border-top: 2px solid var(--fourth-color);
+  border-bottom: 2px solid var(--fourth-color);
 }
 
 .recent-card {
@@ -431,6 +429,19 @@ main {
 .recent-card div p:nth-child(2) {
   font-size: 0.7rem;
   color: var(--text-dark);
+}
+
+.dash-apis .button {
+  text-align: center;
+  background: var(--third-color);
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.dash-apis .button:hover {
+  background: var(--fourth-color);
 }
 
 @media (min-width: 60em) {

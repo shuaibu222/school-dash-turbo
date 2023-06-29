@@ -12,7 +12,7 @@ export default async function Teachers() {
     <section className="teacher">
       <div className="parent-card">
         {teachers.map((teacher) => {
-          const { image, name, courses, _id } = teacher;
+          const { image, name, title, _id } = teacher;
           return (
             <Link href={`teachers/${_id}`} className="teachers-card" key={_id}>
               <Image
@@ -26,7 +26,7 @@ export default async function Teachers() {
               />
               <div className="teachers-desc">
                 <p className="t-name">{name}</p>
-                <p>{courses}</p>
+                <p>{title}</p>
               </div>
               <div className="teachers-icons">
                 <div className="div">
