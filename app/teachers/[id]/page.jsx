@@ -25,31 +25,13 @@ export default async function page({ params: { id } }) {
   return (
     <article className="each-teacher">
       <Link href="/teachers">
-        <BsArrowLeft />
+        <BsArrowLeft className="arrow-left" />
       </Link>
       <section className="eachteacher-card">
         <div className="image">
           <Image src={image} alt={name} width={200} height={200} />
         </div>
         <div className="eachteacher-about">
-          <div className="t-name">
-            <p>{name}</p>
-            <p>{courses} Teacher</p>
-          </div>
-          <div className="t-contact">
-            <div>
-              <MdLocationOn />
-              <p>{address}</p>
-            </div>
-            <div>
-              <HiPhone />
-              <p>{phone}</p>
-            </div>
-            <div>
-              <MdEmail />
-              <p>{email}</p>
-            </div>
-          </div>
           <div className="t-desc">
             <h2>About</h2>
             <p>{about}</p>
@@ -57,6 +39,26 @@ export default async function page({ params: { id } }) {
           <div className="t-edu">
             <h2>Degree</h2>
             <p>{degree}</p>
+          </div>
+        </div>
+      </section>
+      <section className="metadata">
+        <div className="t-name">
+          <p>{name}</p>
+          <p>{courses} Teacher</p>
+        </div>
+        <div className="t-contact">
+          <div>
+            <MdLocationOn />
+            <p>{address}</p>
+          </div>
+          <div>
+            <HiPhone />
+            <p>{phone}</p>
+          </div>
+          <div>
+            <MdEmail />
+            <p>{email}</p>
           </div>
         </div>
       </section>

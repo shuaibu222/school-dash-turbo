@@ -693,6 +693,31 @@ textarea:focus {
   color: var(--first-color);
 }
 
+/* teacher detail styles */
+
+.each-teacher {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 95%;
+  margin-inline: auto;
+}
+
+.arrow-left {
+  font-size: 2rem;
+}
+
+.eachteacher-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.eachteacher-card .image {
+  width: 20rem;
+  height: 20rem;
+}
+
 /* student style */
 
 .students-sec {

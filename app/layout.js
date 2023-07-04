@@ -7,7 +7,7 @@ import { MyContext } from './hooks/MyContext';
 import Sidebar from './components/Sidebar';
 import Navigation from './components/Navigation';
 
-const inter = Poppins({ subsets: ['latin'], weight: '400' });
+const inter = Poppins({ subsets: ['latin'], weight: '300' });
 
 export default function RootLayout({ children }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
