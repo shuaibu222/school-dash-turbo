@@ -17,7 +17,16 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en">
+    <html lang='en'>
+      <head>
+        <title>DHTN school management system</title>
+        <meta
+          name='description'
+          content='this is a huge database system designed for DHTN school'
+        />
+        <meta name='author' content='shuaibu abdulkadir hussain' />
+        <link rel='icon' href='/favicon.ico' />
+      </head>
       <MyContext.Provider
         value={{ isSidebarOpen, setIsSidebarOpen, toggleSidebar }}
       >
