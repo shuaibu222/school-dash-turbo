@@ -43,6 +43,10 @@ html {
     color-scheme: dark;
   }
 
+  body {
+    color-scheme: dark;
+  }
+
   input,
   textarea,
   select {
@@ -55,6 +59,7 @@ body {
   background: var(--first-color);
   max-width: 98vw;
   margin-inline: auto;
+  color: var(--text-light);
 }
 
 a {
